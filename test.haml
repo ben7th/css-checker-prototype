@@ -1,0 +1,19 @@
+!!!
+%html{:lang => :zh}
+  %head
+    %meta{:'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
+    %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'}
+    %title DataFiller Test 
+
+    %link{:rel => 'stylesheet', :href => 'js/qunit/qunit-1.15.0.css'}
+
+  %body
+    #qunit
+    #qunit-fixture
+
+    %script{:type => 'text/javascript', :src => 'js/lib/jquery-2.1.1.min.js'}
+    %script{:type => 'text/javascript', :src => 'js/qunit/qunit-1.15.0.js'}
+
+    %script{:type => 'text/javascript', :src => 'js/lib/coffee-script.js'}
+    %script{:type => 'text/coffeescript', :src => 'js/detector.coffee'}
+    %script{:type => 'text/coffeescript', :src => 'js/test.coffee'}

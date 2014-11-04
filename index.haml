@@ -1,0 +1,33 @@
+!!!
+%html{:lang => :zh}
+  %head
+    %meta{:'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
+    %meta{:name => 'viewport', :content => 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'}
+    %title css checker
+
+    %link{:rel => 'stylesheet', :href => 'js/lib/codemirror/lib/codemirror.css'}
+    %link{:rel => 'stylesheet', :href => 'js/lib/codemirror/theme/vibrant-ink.css'}
+    %link{:rel => 'stylesheet', :href => 'css/ui.css'}
+
+  %body.css-checker
+    .pad
+      .code-editor
+        %textarea.css-code
+
+      .tips
+        .tip.correct{:style => ''} CSS 语法正确
+        .tip.error{:style => 'display:none;'}
+          .t CSS 语法错误
+          .e
+        .tip.message
+
+    %script{:type => 'text/javascript', :src => 'js/lib/jquery-2.1.1.min.js'}
+
+    %script{:type => 'text/javascript', :src => 'js/lib/codemirror/lib/codemirror.js'}
+    %script{:type => 'text/javascript', :src => 'js/lib/codemirror/mode/css/css.js'}
+
+    %script{:type => 'text/javascript', :src => 'js/lib/cssparser/parser.js'}
+
+    %script{:type => 'text/javascript', :src => 'js/lib/coffee-script.js'}
+    %script{:type => 'text/coffeescript', :src => 'js/detector.coffee'}
+    %script{:type => 'text/coffeescript', :src => 'js/ui.coffee'}

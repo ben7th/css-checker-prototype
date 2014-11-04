@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "source-code";
+  src: url('fonts/source-code-font/SourceCodePro-Light.eot');
+  src: local('☺'), 
+    url('fonts/source-code-font/SourceCodePro-Light.otf.woff') format("woff"),
+    url('fonts/source-code-font/SourceCodePro-Light.ttf') format("truetype"),
+    url('fonts/source-code-font/SourceCodePro-Light.svg') format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding:0;
+  margin:0;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif", "微软雅黑";
+  font-size:14px;
+  line-height:21px;
+
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: "source-code" !important;
+  }
+}
+
+@mixin shadow {
+  box-shadow:
+    1px 1px 1px rgba(black, 0.4),
+}
+
+body.css-checker {
+  .pad {
+    $padding:10px;
+    position: fixed;
+    top:$padding;left:$padding;right:$padding;bottom:$padding;
+    background-color:white;
+    border-radius:5px;
+    overflow:hidden;
+    @include shadow;
+
+    .code-editor {
+      position:absolute;
+      top:0;left:0;bottom:0;
+      width:50%;
+      .CodeMirror {
+        height:100%;
+        font-size:16px;
+        line-height:1.3em;
+      }
+    }
+
+    .tips {
+      position:absolute;
+      top:0;right:0;bottom:0;
+      width:50%;
+      .tip {
+        font-weight:bold;
+        border-radius:3px;
+        margin:10px;
+        padding:20px;
+      }
+      .correct {
+        background-color:#efe;
+        // border:1px solid rgba(#393, 0.4);
+        color:#393;
+        // box-shadow:1px 1px 1px rgba(#393, 0.4);
+      }
+      .error {
+        background-color:#fee;
+        // border:1px solid rgba(#933, 0.4);
+        color:#933;
+        // box-shadow:1px 1px 1px rgba(#933, 0.4);
+      }
+      .message {
+        background-color: #eee;
+        color:#333;
+      }
+    }
+  }
+}
